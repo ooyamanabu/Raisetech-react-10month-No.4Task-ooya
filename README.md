@@ -1,2 +1,2 @@
-# Raisetech-react-10month-No.4Task-ooya
+# greeting
 Created with CodeSandbox
