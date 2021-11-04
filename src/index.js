@@ -38,5 +38,5 @@ console.log(newName, newAge); //鬼太郎　　∞
 const userhnfo = {
   ages: "20"
 }; //プロパティが設定されていない値を取り出したい場合(この場合オブジェクトにagesの”２０”しか値はない)
-const { names = "ゲスト", ages } = userhnfo; //こちらで新たに(この場合namesの”ゲスト”)sて英することができる
+const { names = "ゲスト", ages } = userhnfo; //こちらで新たに(この場合namesの”ゲスト”)設定することができる
 console.log(names, ages); //ゲスト　２０　（分割代入で新たに設定しないとundefind等が出てしまうため必ず入れよう）
