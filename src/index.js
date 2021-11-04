@@ -23,7 +23,7 @@ const userName = userInfo.name;
 const userAge = userInfo.age;
 console.log(userName, userAge); //Griff 51 表示
 //分割
-const { name, age } = userInfo; //{}で定義したので{}で囲む　userName× name userAge× age 変数名ではなく、プロパティ名で取り出す。
+const { name, age } = userInfo; //変数userInfoは{}で定義したのでこちらの変数も{}で囲む　userName× name userAge× age 変数名ではなく、プロパティ名で取り出す。
 console.log(name, age); //Griff 51
 //配列の場合は0オリジンの順序に従って値が割り当てられるので[]内の順番通りに取り出されていたが、オブジェクトの場合はプロパティ名に割り当てられているため()内の書く順番が前後しても取り出す値は変わらない
 
@@ -31,5 +31,12 @@ const userJnfo = {
   name: "鬼太郎",
   age: "∞"
 };
-const { name: newName, age: newAge } = userJnfo; //プロパティ名を変更して扱いたい場合 :の後に別名をつけることができる
-console.log(newName, newAge);
+const { name: newName, age: newAge } = userJnfo; //プロパティ名を変更して扱いたい場合 :の後に別名をつけることができる(変数名が重複して取り出せないことがあるため)
+console.log(newName, newAge); //鬼太郎　　∞
+
+//デフォルト値
+const userhnfo = {
+  ages: "20"
+}; //プロパティが設定されていない値を取り出したい場合(この場合オブジェクトにagesの”２０”しか値はない)
+const { names = "ゲスト", ages } = userhnfo; //こちらで新たに(この場合namesの”ゲスト”)sて英することができる
+console.log(names, ages); //ゲスト　２０　（分割代入で新たに設定しないとundefind等が出てしまうため必ず入れよう）
