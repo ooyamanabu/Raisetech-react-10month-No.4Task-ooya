@@ -49,3 +49,15 @@ const welcomeMessage = (username = "ゲスト") => {
 welcomeMessage("山田"); //こんにちは、山田さん
 //引数が渡されなければ、最初の引数(ゲスト)が返されて文字列と合わせて表示される
 welcomeMessage(); //こんにちは、ゲストさん
+
+//〜スプレッド構文〜
+//配列
+const list2 = ["a", "b"];
+console.log(list2); //通常通り配列が取り出される["a","b"]
+console.log(...list2); //配列から中身が順番に取り出される a b
+
+const list3 = [1, 2, 3, 4, 5];
+const [num01, num02, ...sublist] = list3;
+console.log(list3); //[1,2,3,4,5,]
+console.log(...list3); //1 2 3 4 5
+console.log(num01, num02, sublist); //この場合ひとつづつ取り出す用に指定をした変数以降にスプレッド構文を一つ書いているためそれ以降残った値が一塊の配列として取り出される　1 2 [3,4,5]
