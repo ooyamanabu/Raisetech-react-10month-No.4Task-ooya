@@ -61,3 +61,12 @@ const [num01, num02, ...sublist] = list3;
 console.log(list3); //[1,2,3,4,5,]
 console.log(...list3); //1 2 3 4 5
 console.log(num01, num02, sublist); //この場合ひとつづつ取り出す用に指定をした変数以降にスプレッド構文を一つ書いているためそれ以降残った値が一塊の配列として取り出される　1 2 [3,4,5]
+
+const list4 = [1, 2];
+const list5 = [3, 4];
+
+const list6 = [...list4];
+console.log(list6); //配列を新たな変数に入れてそのままコピーできる[1,2]
+
+const list7 = [...list4, ...list5];
+console.log(list7); //別々の値が入った変数を新たな変数に入れ結合して一塊にできる　 [1,2,3,4] (スプレッド構文を使わないと[1,2][3,4]になってしまい結合できない)
