@@ -70,3 +70,11 @@ console.log(list6); //配列を新たな変数に入れてそのままコピー�
 
 const list7 = [...list4, ...list5];
 console.log(list7); //別々の値が入った変数を新たな変数に入れ結合して一塊にできる　 [1,2,3,4] (スプレッド構文を使わないと[1,2][3,4]になってしまい結合できない)
+
+//オブジェクト
+const obj1 = {
+  title: "t1",
+  content: "c1"
+};
+const obj2 = { ...obj1 };
+console.log(obj2);
