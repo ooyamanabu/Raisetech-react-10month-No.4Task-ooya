@@ -40,3 +40,12 @@ const userhnfo = {
 }; //プロパティが設定されていない値を取り出したい場合(この場合オブジェクトにagesの”２０”しか値はない)
 const { names = "ゲスト", ages } = userhnfo; //こちらで新たに(この場合namesの”ゲスト”)設定することができる
 console.log(names, ages); //ゲスト　２０　（分割代入で新たに設定しないとundefind等が出てしまうため必ず入れよう）
+
+const welcomeMessage = (username = "ゲスト") => {
+  const message = `こんにちは、${username}さん`;
+  console.log(message);
+};
+//引数を新たに設定、渡すと書き換わる
+welcomeMessage("山田"); //こんにちは、山田さん
+//引数が渡されなければ、最初の引数(ゲスト)が返されて文字列と合わせて表示される
+welcomeMessage(); //こんにちは、ゲストさん
