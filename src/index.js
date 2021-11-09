@@ -77,4 +77,4 @@ const obj1 = {
   content: "c1"
 };
 const obj2 = { ...obj1 };
-console.log(obj2);
+console.log(obj2); // {title: "t1", content: "c1"}  obj1をスプレッド構文にせず変数名だけで代入してもこの場合同じ結果が表示されるが、後にobj2だけの値を書き換えたい場合スプレッド構文にしておかないとobj1の値も同じように書き変わってしまうためこの書き方をした方が良い
