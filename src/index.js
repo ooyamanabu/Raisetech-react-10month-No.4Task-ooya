@@ -99,9 +99,12 @@ const userInfom = {
 console.log(userInfom); // {name1:"庄司", age1: 20}
 
 //配列　map関数
-const list8 = [1, 2, 3, 4, 5];
+//配列の中身を処理して新しい配列を作り出す
+const list8 = [1, 2, 3, 4, 5]; //まずは配列を用意
+
 const list9 = list8.map((item, index) => {
+  //map()というように　かっこの中に関数処理を書いていく, itemにmap関数の仕様で順番に値が入る
   console.log(`要素：${item}`, `index:${index}`);
   return item * 2;
-});
-console.log(list9);
+}); //引数の()内にアロー関数の処理が書いてある
+console.log(list9); //()で呼び出すので、map関数の処理を代入した新たな変数名を書く
