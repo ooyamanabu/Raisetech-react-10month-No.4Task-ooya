@@ -108,3 +108,9 @@ const list9 = list8.map((item, index) => {
   return item * 2;
 }); //引数の()内にアロー関数の処理が書いてある
 console.log(list9); //()で呼び出すので、map関数の処理を代入した新たな変数名を書く
+/*要素：1 index:0 
+  要素：2 index:1 
+  要素：3 index:2 
+  要素：4 index:3 
+  要素：5 index:4 
+(5) [2, 4, 6, 8, 10]*/
