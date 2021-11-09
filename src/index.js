@@ -114,3 +114,11 @@ console.log(list9); //()で呼び出すので、map関数の処理を代入し�
   要素：4 index:3 
   要素：5 index:4 
 (5) [2, 4, 6, 8, 10]*/
+
+//filter
+const list10 = [10, 50, -40, 85, 100, 70];
+const list11 = list10.filter((item, index) => {
+  console.log(`要素：${item}`, `index:${index}`);
+  return item >= 60;
+});
+console.log(list11);
