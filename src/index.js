@@ -80,4 +80,28 @@ const obj2 = { ...obj1 };
 console.log(
   obj2
 ); /* {title: "t1", content: "c1"}  obj1をスプレッド構文にせず変数名だけで代入してもこの場合同じ結果が表示されるが、
-後にobj2だけの値を書き換えたい場合スプレッド構文にしておかないとobj1の値も同じように書き変わってしまうためこの書き方をした方が良い*/
+後にobj2だけの値を書き換えたい場合スプレッド構文にしておかないとobj1の値も同じように書き変わってしまうためこの書き方をした方が良い 現時点で配列においては変数ごとに参照できるようにしておくのが吉*/
+
+//省略する書き方
+const name1 = "庄司";
+const age1 = 20;
+
+//通常記法
+/*const userInfom = {
+  name1 : name1, age1 : age1
+};*/
+
+//省略記法
+const userInfom = {
+  name1,
+  age1
+}; //プロパティ名と変数名が同一ならば省略して書ける。新たに別の変数に入れ直す必要がない
+console.log(userInfom); // {name1:"庄司", age1: 20}
+
+//配列　map関数
+const list8 = [1, 2, 3, 4, 5];
+const list9 = list8.map((item, index) => {
+  console.log(`要素：${item}`, `index:${index}`);
+  return item * 2;
+});
+console.log(list9);
