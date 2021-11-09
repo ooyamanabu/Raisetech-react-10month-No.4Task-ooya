@@ -116,9 +116,10 @@ console.log(list9); //()で呼び出すので、map関数の処理を代入し�
 (5) [2, 4, 6, 8, 10]*/
 
 //filter
+//条件の一致したものだけを取り出す
 const list10 = [10, 50, -40, 85, 100, 70];
 const list11 = list10.filter((item, index) => {
   console.log(`要素：${item}`, `index:${index}`);
-  return item >= 60;
+  return item >= 60; //itemの中にある60以上の値を返す
 });
 console.log(list11);
