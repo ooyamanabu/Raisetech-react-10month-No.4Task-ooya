@@ -135,16 +135,35 @@ console.log(list11);
 (3) [85, 100, 70,]*/
 
 //Null合体演算子
+//左側がnullかundefinedだったら右側の値が返され、それ以外ならばその時点で左側の値が返される
 let defaultMessage = "エラー無し";
 let errorMessage = null;
 
-let message = errorMessage ?? defaultMessage;
+let message = errorMessage ?? defaultMessage; //左null
 console.log(message); //エラー無し
 
 errorMessage = undefined;
-message = errorMessage ?? defaultMessage;
+message = errorMessage ?? defaultMessage; //左undefined
 console.log(message); //エラー無し
 
 errorMessage = "";
-message = errorMessage ?? defaultMessage;
+message = errorMessage ?? defaultMessage; //左false 空文字
 console.log(message); //""
+
+const emptyStr = "";
+const zero = 0;
+const emptyArr = [];
+const nullVal = null;
+const undefinedVal = undefined;
+
+emptyStr ?? console.log("A"); //false []空文字
+emptyStr || console.log("B");
+zero ?? console.log("C"); //false　０　値がゼロ
+zero || console.log("D");
+emptyArr ?? console.log("E"); //false []空文字
+emptyArr || console.log("F"); //false []空文字
+nullVal ?? console.log("G");
+nullVal || console.log("H");
+undefinedVal ?? console.log("I");
+undefinedVal || console.log("J");
+//B D G H I J
