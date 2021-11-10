@@ -120,6 +120,31 @@ console.log(list9); //()で呼び出すので、map関数の処理を代入し�
 const list10 = [10, 50, -40, 85, 100, 70];
 const list11 = list10.filter((item, index) => {
   console.log(`要素：${item}`, `index:${index}`);
-  return item >= 60; //itemの中にある60以上の値を返す
+  return (
+    item >= 60
+  ); /*itemの中にある60以上の値(true判定されたもの）を返す 
+  条件(この場合return)を書かないと 中身の要素の羅列だけで[]内は空のものしか返ってこない*/
 });
 console.log(list11);
+/*要素：10 index:0 
+  要素：50 index:1 
+  要素：-40 index:2 
+  要素：85 index:3 
+  要素：100 index:4 
+  要素：70 index:5
+(3) [85, 100, 70,]*/
+
+//Null合体演算子
+let defaultMessage = "エラー無し";
+let errorMessage = null;
+
+let message = errorMessage ?? defaultMessage;
+console.log(message); //エラー無し
+
+errorMessage = undefined;
+message = errorMessage ?? defaultMessage;
+console.log(message); //エラー無し
+
+errorMessage = "";
+message = errorMessage ?? defaultMessage;
+console.log(message); //""
