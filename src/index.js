@@ -185,3 +185,9 @@ class User {
 const user = new User("エリー", 38);
 console.log(user.name); //エリー
 user.greet(); //こんにちは！エリーです〜
+
+//JavaScriptによるDOMアクセス
+const title = document.getElementById("title");
+const contents = document.getElementById("content");
+console.log("タイトル要素", title);
+console.log("コンテンツ要素", contents);
