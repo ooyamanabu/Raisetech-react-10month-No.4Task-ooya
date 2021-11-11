@@ -156,14 +156,32 @@ const emptyArr = [];
 const nullVal = null;
 const undefinedVal = undefined;
 
-emptyStr ?? console.log("A"); //false []空文字
-emptyStr || console.log("B");
-zero ?? console.log("C"); //false　０　値がゼロ
-zero || console.log("D");
-emptyArr ?? console.log("E"); //false []空文字
-emptyArr || console.log("F"); //false []空文字
-nullVal ?? console.log("G");
-nullVal || console.log("H");
-undefinedVal ?? console.log("I");
-undefinedVal || console.log("J");
+emptyStr ?? console.log("A"); //
+emptyStr || console.log("B"); //false []空文字
+zero ?? console.log("C"); //
+zero || console.log("D"); //false ０　値がゼロ
+emptyArr ?? console.log("E"); //
+emptyArr || console.log("F"); //
+nullVal ?? console.log("G"); // null
+nullVal || console.log("H"); //null
+undefinedVal ?? console.log("I"); //undefined
+undefinedVal || console.log("J"); //undefined
 //B D G H I J
+
+//クラス構文
+/*情報を表示するまでに必要な処理を、ひとまとめにしてあるようなイメージ
+reactを使用する際には使わなくても同じことができたりするが、メソッドは理解しておこう*/
+class User {
+  //クラス名は頭文字大文字推奨
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`こんにちは!${this.name}です〜`);
+  }
+}
+const user = new User("エリー", 38);
+console.log(user.name); //エリー
+user.greet(); //こんにちは！エリーです〜
