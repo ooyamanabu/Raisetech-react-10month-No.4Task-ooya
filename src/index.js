@@ -188,6 +188,20 @@ user.greet(); //こんにちは！エリーです〜
 
 //JavaScriptによるDOMアクセス
 const title = document.getElementById("title");
-const contents = document.getElementById("content");
+const contents = document.getElementsByClassName("content");
 console.log("タイトル要素", title);
 console.log("コンテンツ要素", contents);
+
+//タイトル要素
+//<h2 id="title">フロントエンドコース</h2>
+
+//コンテンツ要素
+/*HTMLCollection {0: HTMLDivElement, 1: HTMLDivElement, length: 2, item: ƒ item(), namedItem: ƒ namedItem()…}
+0: 
+<div class="content">…</div>
+1: 
+<div class="content">…</div>
+length: 2
+item: ƒ item() {}
+namedItem: ƒ namedItem() {}
+<constructor>: "HTMLCollection"*/
