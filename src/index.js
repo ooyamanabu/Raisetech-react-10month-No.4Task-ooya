@@ -186,9 +186,9 @@ const user = new User("エリー", 38);
 console.log(user.name); //エリー
 user.greet(); //こんにちは！エリーです〜
 
-//JavaScriptによるDOMアクセス
-const title = document.getElementById("title");
-const contents = document.getElementsByClassName("content");
+//JavaScriptによるDOMアクセス(javascriptからhtmlの中身を取得する)
+const title = document.getElementById("title"); //idはひとつのタグごとに名前をつける　(element)
+const contents = document.getElementsByClassName("content"); //classは中身が複数ある場合もある　(elements 複数形）
 console.log("タイトル要素", title);
 console.log("コンテンツ要素", contents);
 
@@ -205,3 +205,9 @@ length: 2
 item: ƒ item() {}
 namedItem: ƒ namedItem() {}
 <constructor>: "HTMLCollection"*/
+
+/* その他にも、getElementsByTagName,querySelector,querySelectorAll etc...がある
+DOM要素内のHTMLマークアップへのアクセス　　div.innnerHTML
+親要素へのアクセス　　　　div.parentNode
+子要素へのアクセス　　　div.children
+etc... */
