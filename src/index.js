@@ -211,3 +211,8 @@ DOM要素内のHTMLマークアップへのアクセス　　div.innnerHTML
 親要素へのアクセス　　　　div.parentNode
 子要素へのアクセス　　　div.children
 etc... */
+
+const conten = document.createElement("div");
+conten.innerHTML = "<p>SPAとは</p>";
+const conte = document.getElementById("conten");
+content.appendChild(conten);
