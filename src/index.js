@@ -212,7 +212,12 @@ DOM要素内のHTMLマークアップへのアクセス　　div.innnerHTML
 子要素へのアクセス　　　div.children
 etc... */
 
-const conten = document.createElement("div");
-conten.innerHTML = "<p>SPAとは</p>";
-const conte = document.getElementById("conten");
-content.appendChild(conten);
+const conten = document.createElement("div"); //divタグ生成
+conten.innerHTML = "<p>SPAとは</p>"; //そのdivタグの中にpタグを生成
+const contenu = document.getElementById("contents"); //HTMLのdivタグ id名contentsの中に
+contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
+//HTMLにdivタグ、その中にpタグが作られ"SPAとは"がHTMLに新たに生成され表示される
+
+//DOMの削除
+/*const contentio = document.getElementById("contentio");
+content.remove();:*/
