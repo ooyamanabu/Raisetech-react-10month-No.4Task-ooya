@@ -216,8 +216,13 @@ const conten = document.createElement("div"); //divタグ生成
 conten.innerHTML = "<p>SPAとは</p>"; //そのdivタグの中にpタグを生成
 const contenu = document.getElementById("contents"); //HTMLのdivタグ id名contentsの中に
 contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
-//HTMLにdivタグ、その中にpタグが作られ"SPAとは"がHTMLに新たに生成され表示される
+//HTMLにdivタグ、その中にpタグが作られ"SPAとは"がHTMLに新たに生成され表示される:
 
-//DOMの削除
-/*const contentio = document.getElementById("contentio");
-content.remove();:*/
+//DOMの削除(↑上記でcontentsタグの中身を取得した変数contenuを削除)
+//contenu.remove();
+
+//Javascriptとイベント
+const button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+  alert("クリックされました");
+});
