@@ -222,7 +222,17 @@ contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
 //contenu.remove();
 
 //Javascriptとイベント
+
 const button = document.getElementById("myButton");
 button.addEventListener("click", () => {
   alert("クリックされました");
+});
+/*const button = document.getElementById("myButton");
+document.addEventListener("click", () => {
+  alert("クリックされました");
+});*/
+
+const input = document.getElementById("inputId");
+input.addEventListener("change", (event) => {
+  console.log(event.target.value);
 });
