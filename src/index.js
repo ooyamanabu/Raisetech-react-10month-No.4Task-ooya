@@ -228,19 +228,12 @@ contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
 //contenu.remove();
 
 //Javascriptとイベント
-/*const h = document.getElementById("my");
-document.addEventListener("click", () => {
-alert("クリックされました");
-});*/
 
-/*const button = document.getElementById("myButton");
+const button = document.getElementById("myButton");
 button.addEventListener("click", () => {
   alert("クリックされました");
-});*/
-/*const button = document.getElementById("myButton");
-document.addEventListener("click", () => {
-  alert("クリックされました");
-});*/
+}); /*ボタン発生イベント（htmlに書かれたボタンタグを使ってイベントを起こす）
+ボタンをクリックした際にポップアップでアラートが出てくるイベント*/
 
 /*const input = document.getElementById("inputId");
 document.addEventListener("change", (event) => {
