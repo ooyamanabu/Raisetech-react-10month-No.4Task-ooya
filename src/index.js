@@ -228,14 +228,18 @@ contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
 //contenu.remove();
 
 //Javascriptとイベント
-
 const button = document.getElementById("myButton");
 button.addEventListener("click", () => {
-  alert("クリックされました");
-}); /*ボタン発生イベント（htmlに書かれたボタンタグを使ってイベントを起こす）
+  //第1引数にイベント（"click")
+  alert("クリックされました"); //第2引数にイベントハンドラー（関数　中身の処理）
+}); //ここでは使用してないが第3引数（useCapture)も設定可
+
+/*ボタン発生イベント（htmlに書かれたボタンタグを使ってイベントを起こす）
 ボタンをクリックした際にポップアップでアラートが出てくるイベント*/
 
-/*const input = document.getElementById("inputId");
+const input = document.getElementById("inputId");
 document.addEventListener("change", (event) => {
   console.log(event.target.value);
-});*/
+}); //入力された値がconsoleに表示される
+
+//changeイベント（今回はテキストボックスに入力した値が変更した場合）
