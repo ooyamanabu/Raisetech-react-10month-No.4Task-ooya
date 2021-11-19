@@ -241,5 +241,10 @@ const input = document.getElementById("inputId");
 document.addEventListener("change", (event) => {
   console.log(event.target.value);
 }); //入力された値がconsoleに表示される
-
 //changeイベント（今回はテキストボックスに入力した値が変更した場合）
+
+//preventDefault()
+const buttons = document.getElementById("myButtons");
+buttons.addEventListener("click", (event) => {
+  event.preventDefault();
+});
