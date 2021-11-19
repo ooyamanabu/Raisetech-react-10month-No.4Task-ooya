@@ -60,8 +60,14 @@ const list3 = [1, 2, 3, 4, 5];
 const [num01, num02, ...sublist] = list3;
 console.log(list3); //[1,2,3,4,5,]
 console.log(...list3); //1 2 3 4 5
-console.log(num01, num02, sublist); //この場合ひとつづつ取り出す用に指定をした変数以降にスプレッド構文を一つ書いているためそれ以降残った値が一塊の配列として取り出される　1 2 [3,4,5]
+console.log(
+  num01,
+  num02,
+  sublist
+); /*この場合ひとつづつ取り出す用に指定をした変数以降にスプレッド構文を一つ書いているためそれ以降残った値が一塊の配列として取り出される
+　1 2 [3,4,5]/
 
+//配列のコピー
 const list4 = [1, 2];
 const list5 = [3, 4];
 
@@ -222,17 +228,21 @@ contenu.appendChild(conten); //contenのpタグが新たに挿入生成される
 //contenu.remove();
 
 //Javascriptとイベント
+/*const h = document.getElementById("my");
+document.addEventListener("click", () => {
+alert("クリックされました");
+});*/
 
-const button = document.getElementById("myButton");
+/*const button = document.getElementById("myButton");
 button.addEventListener("click", () => {
   alert("クリックされました");
-});
+});*/
 /*const button = document.getElementById("myButton");
 document.addEventListener("click", () => {
   alert("クリックされました");
 });*/
 
-const input = document.getElementById("inputId");
-input.addEventListener("change", (event) => {
+/*const input = document.getElementById("inputId");
+document.addEventListener("change", (event) => {
   console.log(event.target.value);
-});
+});*/
