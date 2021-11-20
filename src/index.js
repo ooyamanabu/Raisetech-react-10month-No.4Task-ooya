@@ -239,12 +239,13 @@ button.addEventListener("click", () => {
 
 const input = document.getElementById("inputId");
 document.addEventListener("change", (event) => {
+  //chabgeが起きた時のイベントの中を設定
   console.log(event.target.value);
 }); //入力された値がconsoleに表示される
-//changeイベント（今回はテキストボックスに入力した値が変更した場合）
+//changeイベント（今回はテキストボックスに入力した値が変更した場合）　consoleに表示される
 
 //preventDefault()
 const buttons = document.getElementById("myButtons");
 buttons.addEventListener("click", (event) => {
-  event.preventDefault();
+  event.preventDefault(); //画面遷移を防げたりする(この処理を書かないと見た目に一瞬画面遷移が見て取れる)
 });
