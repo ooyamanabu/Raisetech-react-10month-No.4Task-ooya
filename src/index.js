@@ -245,7 +245,23 @@ document.addEventListener("change", (event) => {
 //changeイベント（今回はテキストボックスに入力した値が変更した場合）　consoleに表示される
 
 //preventDefault()
+//既定の処理を防ぐ
 const buttons = document.getElementById("myButtons");
 buttons.addEventListener("click", (event) => {
   event.preventDefault(); //画面遷移を防げたりする(この処理を書かないと見た目に一瞬画面遷移が見て取れる)
 });
+
+//バブリング
+/*親要素子要素両方に同じイベントが割り当てられていた時、子要素が親要素にも伝搬する
+行うイベントを探しに行って返っていく際に、子要素の上の親要素のも実行して返っていくため*/
+
+const boxing = document.getElementById("box");
+boxing.addEventListener("click", () => {
+  alert("親です");
+});
+
+const bing = document.getElementById("boji");
+bing.addEventListener("click", () => {
+  alert("子です");
+});
+//バブリングしてしまう例　(子要素をクリックすると”子です”の結果ボタンが発生し、その後”親です”結果ボタンが出る)
