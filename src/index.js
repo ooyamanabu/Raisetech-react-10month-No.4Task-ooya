@@ -232,7 +232,7 @@ const button = document.getElementById("myButton");
 button.addEventListener("click", () => {
   //第1引数にイベント（"click")
   alert("クリックされました"); //第2引数にイベントハンドラー（関数　中身の処理）
-}); //ここでは使用してないが第3引数（useCapture)も設定可
+}); //ここでは使用してないが第3引数（useCapture)も設定可（true false）
 
 /*ボタン発生イベント（htmlに書かれたボタンタグを使ってイベントを起こす）
 ボタンをクリックした際にポップアップでアラートが出てくるイベント*/
@@ -259,9 +259,16 @@ const boxing = document.getElementById("box");
 boxing.addEventListener("click", () => {
   alert("親です");
 });
-
-const bing = document.getElementById("boji");
+/*const bing = document.getElementById("boji");
 bing.addEventListener("click", () => {
   alert("子です");
-});
+});*/
 //バブリングしてしまう例　(子要素をクリックすると”子です”の結果ボタンが発生し、その後”親です”結果ボタンが出る)
+
+//stopPropagation() ↑上記のままだとバブリングが起こるためそれを阻止するイベント
+const bing = document.getElementById("boji");
+bing.addEventListener("click", (e) => {
+  e.stopPropagation();
+  alert("子です");
+});
+//バブリングは起こらず、各々（親要素、子要素）クリックした場所のアラートが表示される
